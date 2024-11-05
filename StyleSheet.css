@@ -1,0 +1,416 @@
+body {
+    margin: 0 auto;
+    background-color: #202020;
+    justify-content: center;
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: radial-gradient(circle, rgba(55,55,55, 1), rgba(28,28,28, 1));
+}
+
+nav {
+    margin-top: 0.5rem;
+    border: 2px solid;
+    border-color: darkgrey;
+    border-radius: 5em;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+    width: fit-content;
+    background-color: #252525;
+    color: lightgray;
+    overflow:auto;
+    align-items: center;
+}
+
+#socialMedia{
+    display:flex;
+    flex-direction:column;
+    position:fixed;
+    right: 1.5em;
+    transform: translateY(-50%);
+    top: 50%;
+    opacity: 0.6;
+    width: contain;
+}
+
+    #socialMedia > a > img {
+        width: 2.5em;
+        margin: 0.1rem;
+        opacity: 0.7;
+    }
+
+        #socialMedia > a > img:hover {
+            cursor: pointer;
+            animation: hithere 1s ease infinite;
+        }
+
+@keyframes hithere {
+    30% {
+        transform: scale(1.2);
+    }
+
+    40%, 60% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+
+    50% {
+        transform: rotate(20deg) scale(1.2);
+    }
+
+    70% {
+        transform: rotate(0deg) scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+nav > h4:hover {
+    position: relative;
+    background-color: #252525;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+@property --rotation-angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+    nav > h4:hover::after, nav > h4:hover::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: conic-gradient(from var(--rotation-angle), transparent 85%,lightgrey, transparent);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0.6;
+        padding: 0.2rem;
+        border-radius: 1.5rem;
+        z-index: -1;
+        animation: 2s spin linear infinite;
+    }
+
+    nav > h4:hover::before {
+        filter: blur(1rem);
+    }
+
+
+@keyframes spin{
+    from{
+        --rotation-angle: -90deg;
+    }
+    to{
+        --rotation-angle: 270deg;
+    }
+}
+
+#container {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display:flex;
+
+}
+
+ul > li{
+    margin: 1em;
+    padding: 0.5em;
+}
+
+ul > li:hover{
+    transform: scale(1.05);
+/*    background-image: linear-gradient(transparent, #2f2f2f, transparent);
+    border-radius: 5em;*/
+}
+
+#gitImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    top: 40%;
+    left: 50%;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background-image: url("https://img.icons8.com/material-rounded/384/github.png");
+    background-size: cover;
+    box-shadow: 0px 0px 1px 1px #0000001a;
+    animation: pulse 1.5s ease infinite;
+}
+
+#cSharpImg::before {
+    content: '';
+    position: absolute;
+    top: 1.5em;
+    right: 0.8em;
+    width: 2.5em;
+    height: 2.5em;
+    background-image: url("https://cdn-icons-png.flaticon.com/256/74/74906.png");
+    border-radius: 50%;
+    background-size: cover;
+}
+
+#cSharpImg {
+    position: absolute;
+    top: 32.5%;
+    left: 45.5%;
+    width: 15em;
+    height: 15em;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-radius: 50%;
+    border-width: 0.1em 0.1em 0 0;
+    animation: orbit 5s linear infinite;
+}
+
+#cImg {
+    position: absolute;
+    top: 36%;
+    left: 48%;
+    width: 10em;
+    height: 10em;
+    border-style: solid;
+    border-color: lightgray transparent transparent transparent;
+    border-radius: 50%;
+    border-width: 0.1em 0.1em 0 0;
+    animation: orbit 3s linear infinite;
+}
+
+    #cImg::before {
+        content: '';
+        position: absolute;
+        top: 1.4em;
+        right: 0.4em;
+        width: 2em;
+        height: 2em;
+        background-image: url("https://cdn-icons-png.flaticon.com/512/3096/3096988.png");
+        border-radius: 50%;
+        background-size: cover;
+    }
+
+#jsImg {
+    position: absolute;
+    top: 12%;
+    left: 35%;
+    width: 40em;
+    height: 40em;
+    border-style: solid;
+    /*border-color: lightgray lightgray lightgray lightgray;*/
+    border-color: lightgray transparent transparent transparent;
+    border-radius: 50%;
+    border-width: 0.1em 0.1em 0 0;
+    animation: orbit 13s linear infinite;
+}
+
+    #jsImg::before {
+        content: '';
+        position: absolute;
+        top: 5.7em;
+        right: 3.9em;
+        width: 3em;
+        height: 3em;
+        background-image: url("https://img.icons8.com/metro/384/js.png");
+        border-radius: 50%;
+        background-size: cover;
+    }
+
+#htmlImg {
+    position: absolute;
+    top: 10%;
+    left: 78.5%;
+    width: 6.5em;
+    height: 6.5em;
+    border-style: solid;
+    /*border-color: lightgray lightgray lightgray lightgray;*/
+    border-color: transparent transparent lightgray transparent;
+    border-radius: 50%;
+    border-width: 0.1em 0.1em 0.1em 0;
+    animation: orbitCCW 3s linear infinite;
+}
+
+    #htmlImg::before {
+        content: '';
+        position: absolute;
+        bottom: 0.7em;
+        left: 4.5em;
+        width: 2em;
+        height: 2em;
+        background-image: url("https://img.icons8.com/metro/384/html.png");
+        border-radius: 50%;
+        background-size: cover;
+    }
+
+#cssImg {
+    position: absolute;
+    top: 10%;
+    left: 78.5%;
+    width: 6.5em;
+    height: 6.5em;
+    border-style: solid;
+    /*border-color: lightgray lightgray lightgray lightgray;*/
+    border-color: lightgray transparent transparent transparent;
+    border-radius: 50%;
+    border-width: 0.1em 0.1em 0 0;
+    animation: orbit 3s linear infinite;
+}
+
+    #cssImg::before {
+        content: '';
+        opacity: 0.9;
+        position: absolute;
+        top: 0.7em;
+        left: 4.5em;
+        width: 2em;
+        height: 2em;
+        background-image: url("https://img.icons8.com/metro/384/css.png");
+        border-radius: 50%;
+        background-size: cover;
+    }
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitCCW {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow:0 0 0.5rem 0.5rem rgba(0,0,0,0.3);
+    }
+
+    50%{
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow:0 0 2rem 2rem rgba(0,0,0,0);
+    }
+}
+
+h1 {
+    padding: 1em;
+    color: lightgray;
+    text-shadow: 0.1em 0.1em 0.2em red;
+    /*animation: gradient 3s ease infinite;*/
+}
+
+/*@keyframes gradient {
+    from{
+
+        background-image: conic-gradient(white,grey,black,white);
+    }
+}*/
+
+@keyframes blink{
+    40% {
+        opacity: 1;
+    }
+
+    42%{
+        opacity: 0.7;
+    }
+
+    44%{
+        opacity: 1;
+    }
+
+    46%{
+        opacity: 0.2;
+    }
+
+    50%{
+        opacity: 0.9;
+    }
+}
+
+#returnUp:hover {
+    animation: bounce 0.7s ease infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, -0.5rem, 0);
+    }
+}
+
+nav > h2:last-child:hover {
+    background-color: darkgrey;
+    border-radius: 3rem;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+h2, h4{
+    color: lightgray;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+nav:first-child {
+    position: absolute;
+    left: 1rem
+}
+
+
+footer{
+    position:absolute;
+    bottom: 1em;
+    color: white;
+
+}
+
+    footer > img {
+        border: hidden;
+        border-radius: 5px;
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        text-align: center;
+        align-content: center;
+        width: 2rem;
+        height: 2rem;
+        background-color: darkgrey;
+        opacity: 0.1;
+        margin: 1rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+::-webkit-scrollbar {
+    width: 1em;
+    border-left: 0.1rem solid #5e5e5e;
+    background-color: #4e4e4e;
+}
+
+::-webkit-scrollbar-thumb {
+    border-left: 0.1rem solid #4e4e4e;
+    background-color: #2c2c2c;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #252525;
+    }
