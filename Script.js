@@ -33,10 +33,11 @@ let skillSet = document.createElement("div");
 skillSet.id = "skillSet";
 footer.prepend(skillSet);
 
-skillSet.innerHTML = `<ul><li>Java Script</li><li>CSS</li><li>HTML</li><li>C#</li><li>ASP.NET</li><li>Python</li><li>C</li></ul>`;
+skillSet.innerHTML = `<ul><li id="jsSkill">Java Script</li><li id="cssSkill">CSS</li><li id="htmlSkill">HTML</li>
+                      <li id="cSharpSkill">C#</li><li id="aspSkill">ASP.NET</li><li id="pythonSkill">Python</li>
+                      <li id="cSkill">C</li></ul>`;
 
-let titleName = document.createElement("h2");
-
+let titleName = document.createElement("h1");
 let myProjects = document.createElement("h4");
 let mySkills = document.createElement("h4");
 let about = document.createElement("h4");
@@ -46,11 +47,15 @@ let downloadCV = document.createElement("h2");
 let returnUp = document.createElement("img");
 let socialMedia = document.getElementById("socialMedia");
 
+titleName.innerText = "Pavel Butov";
+header.append(titleName);
+
 let title = document.createElement("h1");
 title.innerText = "Fullstack Developer";
 header.append(title);
 
-titleName.innerText = "Pavel Butov";
+
+
 myProjects.innerText = "Projects";
 mySkills.innerText = "Skills";
 about.innerText = "About";
@@ -86,7 +91,6 @@ instaGram.target = "_blank";
 socialMedia.appendChild(instaGram);
 instaGram.innerHTML = `<img id="instaGram" src="https://img.icons8.com/?size=100&id=85140&format=png&color=000000" />`;
 
-navbar.append(titleName);
 navbar.append(myProjects);
 navbar.append(mySkills);
 navbar.append(about);

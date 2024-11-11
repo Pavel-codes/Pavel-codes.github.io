@@ -8,10 +8,10 @@ body {
 }
 
 nav {
-    margin-top: 0.5rem;
-    border: 2px solid;
+    margin-top: 0.1rem;
+    /*border: 2px solid;*/
     border-color: darkgrey;
-    border-radius: 5em;
+    /*border-radius: 5em;*/
     position: absolute;
     display: flex;
     left: 50%;
@@ -128,8 +128,6 @@ ul > li{
 
 ul > li:hover{
     transform: scale(1.05);
-/*    background-image: linear-gradient(transparent, #2f2f2f, transparent);
-    border-radius: 5em;*/
 }
 
 #gitImg {
@@ -206,11 +204,10 @@ ul > li:hover{
     width: 40em;
     height: 40em;
     border-style: solid;
-    /*border-color: lightgray lightgray lightgray lightgray;*/
     border-color: lightgray transparent transparent transparent;
     border-radius: 50%;
     border-width: 0.1em 0.1em 0 0;
-    animation: orbit 13s linear infinite;
+    animation: orbit 15s linear infinite;
 }
 
     #jsImg::before {
@@ -232,11 +229,10 @@ ul > li:hover{
     width: 6.5em;
     height: 6.5em;
     border-style: solid;
-    /*border-color: lightgray lightgray lightgray lightgray;*/
     border-color: transparent transparent lightgray transparent;
     border-radius: 50%;
     border-width: 0.1em 0.1em 0.1em 0;
-    animation: orbitCCW 3s linear infinite;
+    animation: orbitCCW 2s linear infinite;
 }
 
     #htmlImg::before {
@@ -253,24 +249,23 @@ ul > li:hover{
 
 #cssImg {
     position: absolute;
-    top: 10%;
-    left: 78.5%;
-    width: 6.5em;
-    height: 6.5em;
+    top: 6%;
+    left: 74%;
+    width: 10em;
+    height: 10em;
     border-style: solid;
-    /*border-color: lightgray lightgray lightgray lightgray;*/
     border-color: lightgray transparent transparent transparent;
     border-radius: 50%;
     border-width: 0.1em 0.1em 0 0;
-    animation: orbit 3s linear infinite;
+    animation: orbit 5s linear infinite;
 }
 
     #cssImg::before {
         content: '';
         opacity: 0.9;
         position: absolute;
-        top: 0.7em;
-        left: 4.5em;
+        top: 1.2em;
+        left: 7.5em;
         width: 2em;
         height: 2em;
         background-image: url("https://img.icons8.com/metro/384/css.png");
@@ -310,15 +305,8 @@ h1 {
     padding: 1em;
     color: lightgray;
     text-shadow: 0.1em 0.1em 0.2em red;
-    /*animation: gradient 3s ease infinite;*/
 }
 
-/*@keyframes gradient {
-    from{
-
-        background-image: conic-gradient(white,grey,black,white);
-    }
-}*/
 
 @keyframes blink{
     40% {
@@ -374,12 +362,26 @@ nav:first-child {
     left: 1rem
 }
 
+#jsSkill {
+    list-style-image: url("https://img.icons8.com/ios-filled/24/1A1A1A/javascript-logo.png");
+}
 
-footer{
-    position:absolute;
+#pythonSkill {
+    list-style-image: url("https://img.icons8.com/material/24/python.png");
+}
+
+#aspSkill {
+    list-style-image: url("https://img.icons8.com/color/24/net-framework.png");
+}
+
+#csharpSkill {
+    list-style-image: url("https://img.icons8.com/color/24/c-sharp-logo.png");
+}
+
+footer {
+    position: absolute;
     bottom: 1em;
     color: white;
-
 }
 
     footer > img {
