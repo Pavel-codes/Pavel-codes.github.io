@@ -13,6 +13,10 @@ let cImage = document.createElement("div");
 cImage.id = "cImg";
 container.append(cImage);
 
+let pythonImage = document.createElement("div");
+pythonImage.id = "pythonImg";
+container.append(pythonImage);
+
 let jsImage = document.createElement("div");
 jsImage.id = "jsImg";
 container.append(jsImage);
@@ -31,7 +35,7 @@ container.append(cSharpImage);
 
 let skillSet = document.createElement("div");
 skillSet.id = "skillSet";
-footer.prepend(skillSet);
+container.prepend(skillSet);
 
 skillSet.innerHTML = `<ul><li id="jsSkill">Java Script</li><li id="cssSkill">CSS</li><li id="htmlSkill">HTML</li>
                       <li id="cSharpSkill">C#</li><li id="aspSkill">ASP.NET</li><li id="pythonSkill">Python</li>

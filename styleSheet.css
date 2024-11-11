@@ -197,10 +197,36 @@ ul > li:hover{
         background-size: cover;
     }
 
+#pythonImg {
+    position: absolute;
+    top: 25%;
+    left: 42%;
+    width: 25em;
+    height: 25em;
+    border-style: solid;
+    border-color: transparent lightgray transparent transparent;
+    border-radius: 50%;
+    border-width: 0.1em 0.1em 0 0;
+    animation: orbitCCW 8s linear infinite;
+}
+
+    #pythonImg::before {
+        content: '';
+        position: absolute;
+        top: 1.5em;
+        right: 3.2em;
+        width: 3em;
+        height: 3em;
+        background-image: url("https://i.ibb.co/5G8B3wq/Python-logo.png");
+        border-radius: 50%;
+        background-size: cover;
+        z-index: 1;
+    }
+
 #jsImg {
     position: absolute;
     top: 12%;
-    left: 35%;
+    left: 34%;
     width: 40em;
     height: 40em;
     border-style: solid;
@@ -363,7 +389,7 @@ nav:first-child {
 }
 
 #jsSkill {
-    list-style-image: url("https://img.icons8.com/ios-filled/24/1A1A1A/javascript-logo.png");
+    list-style-image: url("https://img.icons8.com/ios-filled/24/0A0A0A/javascript-logo.png");
 }
 
 #pythonSkill {
@@ -375,8 +401,40 @@ nav:first-child {
 }
 
 #csharpSkill {
-    list-style-image: url("https://img.icons8.com/color/24/c-sharp-logo.png");
+    list-style-image: url("https://img.icons8.com/color/24/c-sharp-logo.png")
 }
+
+#cSkill {
+    list-style-image: url("https://img.icons8.com/fluency/24/c-programming.png")
+}
+
+#cssSkill {
+    list-style-image: url("https://img.icons8.com/ios-filled/24/0A0A0A/css3.png");
+}
+
+#htmlSkill {
+    list-style-image: url("https://img.icons8.com/ios-filled/24/0A0A0A/html-5--v1.png");
+}
+
+#skillSet {
+    position: absolute;
+    top: 10em;
+    left: 1em;
+    color: white;
+}
+
+    #skillSet > img {
+        border: hidden;
+        border-radius: 5px;
+        width: 2rem;
+        height: 2rem;
+        background-color: rgba(80,80,80,0.6);
+        opacity: 0.3;
+        margin: 1rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+        cursor: pointer;
+    }
 
 footer {
     position: absolute;
@@ -394,8 +452,8 @@ footer {
         align-content: center;
         width: 2rem;
         height: 2rem;
-        background-color: darkgrey;
-        opacity: 0.1;
+        background-color: rgba(80,80,80,0.6);
+        opacity: 0.3;
         margin: 1rem;
         padding: 0.5rem;
         font-size: 2rem;
