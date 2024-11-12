@@ -41,7 +41,8 @@ skillSet.innerHTML = `<ul><li id="jsSkill">Java Script</li><li id="cssSkill">CSS
                       <li id="cSharpSkill">C#</li><li id="aspSkill">ASP.NET</li><li id="pythonSkill">Python</li>
                       <li id="cSkill">C</li></ul>`;
 
-let titleName = document.createElement("h1");
+let titleNameTop = document.createElement("h1");
+let titleNameBottom = document.createElement("h1");
 let myProjects = document.createElement("h4");
 let mySkills = document.createElement("h4");
 let about = document.createElement("h4");
@@ -51,12 +52,20 @@ let downloadCV = document.createElement("h2");
 let returnUp = document.createElement("img");
 let socialMedia = document.getElementById("socialMedia");
 
-titleName.innerText = "Pavel Butov";
-header.append(titleName);
+titleNameTop.innerText = "Pavel Butov";
+titleNameTop.id = "topName";
+titleNameBottom.innerText = "Pavel Butov";
+titleNameBottom.id = "bottomName";
+titleNameBottom.ariaHidden = "true";
 
-let title = document.createElement("h1");
-title.innerText = "Fullstack Developer";
-header.append(title);
+header.append(titleNameTop);
+header.append(titleNameBottom);
+
+let titleTop = document.createElement("h1");
+let titleBottom = document.createElement("h1");
+titleTop.innerText = "Fullstack Developer";
+titleTop.id = "titleTop";
+header.append(titleTop);
 
 
 

@@ -9,9 +9,7 @@ body {
 
 nav {
     margin-top: 0.1rem;
-    /*border: 2px solid;*/
     border-color: darkgrey;
-    /*border-radius: 5em;*/
     position: absolute;
     display: flex;
     left: 50%;
@@ -328,9 +326,13 @@ ul > li:hover{
 }
 
 h1 {
-    padding: 1em;
+    padding: 0.1em;
     color: lightgray;
-    text-shadow: 0.1em 0.1em 0.2em red;
+    /*text-shadow: 0.1em 0.1em 0.2em red;*/
+}
+
+#titleTop{
+    margin-top: 5em;
 }
 
 
@@ -369,8 +371,27 @@ h1 {
     }
 }
 
+#topName {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+
+#bottomName {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    background: linear-gradient(to bottom,#000000, #202020, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translate(-0.02em, 0.02em);
+}
+
 nav > h2:last-child:hover {
-    background-color: darkgrey;
+    transform: scale(1.02);
+    transform: translateY(-0.1em);
     border-radius: 3rem;
     opacity: 0.6;
     cursor: pointer;
