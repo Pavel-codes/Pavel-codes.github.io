@@ -1,10 +1,17 @@
+:root {
+    --background-darkest: #1C1C1C;
+    --background-color: #2e3440;
+    --background-complimentary: #3b4252;
+    --background-glow-color: #4c566a;
+}
+
 body {
     margin: 0 auto;
-    background-color: #202020;
     justify-content: center;
     position: relative;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: radial-gradient(circle, rgba(55,55,55, 1), rgba(28,28,28, 1));
+    /*background-image: radial-gradient(circle, rgba(55,55,55, 1), rgba(28,28,28, 1));*/
+    background-image: radial-gradient(circle, var(--background-color), rgba(28,28,28, 1));
 }
 
 nav {
@@ -16,7 +23,7 @@ nav {
     transform: translate(-50%);
     justify-content: center;
     width: fit-content;
-    background-color: #252525;
+    background-color: transparent;
     color: lightgray;
     overflow:auto;
     align-items: center;
@@ -68,7 +75,7 @@ nav {
 
 nav > h4:hover {
     position: relative;
-    background-color: #252525;
+    background-color: var(--background-darkest);
     border-radius: 1.5rem;
     cursor: pointer;
 }
@@ -331,8 +338,10 @@ h1 {
     /*text-shadow: 0.1em 0.1em 0.2em red;*/
 }
 
-#titleTop{
+#titleTop {
     margin-top: 5em;
+    margin-left: 1em;
+    text-shadow: 0.1em 0.1em 0.1em red;
 }
 
 
@@ -430,11 +439,11 @@ nav:first-child {
 }
 
 #cssSkill {
-    list-style-image: url("https://img.icons8.com/ios-filled/24/0A0A0A/css3.png");
+    list-style-image: url("https://img.icons8.com/color/24/css3.png");
 }
 
 #htmlSkill {
-    list-style-image: url("https://img.icons8.com/ios-filled/24/0A0A0A/html-5--v1.png");
+    list-style-image: url("https://img.icons8.com/color/24/html-5--v2.png");
 }
 
 #skillSet {
