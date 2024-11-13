@@ -342,8 +342,44 @@ h1 {
     margin-top: 5em;
     margin-left: 1em;
     text-shadow: 0.1em 0.1em 0.1em red;
+    animation: glitchLeft 2s ease infinite;
 }
 
+@keyframes glitchLeft{
+    0% {
+        transform: translateX(0.02em);
+        text-shadow: 0.15em 0.1em 0.1em red;
+    }
+
+    20% {
+        transform: translateX(0.05em);
+        text-shadow: 0.1em 0.1em 0.1em red;
+    }
+
+    30% {
+        text-shadow: 0.1em 0.1em 0 red;
+        transform: translateX(0.03em);
+    }
+
+    50% {
+        text-shadow: 0.1em 0.1em 0.1em red;
+        transform: translateX(0);
+    }
+
+    70% {
+        text-shadow: 0 0.1em 0.1em red;
+    }
+
+    80% {
+        transform: translateX(0.03em);
+        text-shadow: 0.1em 0.1em 0.1em red;
+    }
+
+    100% {
+        transform: translateX(0.05em);
+        text-shadow: 0.2em 0.1em 0.1em red;
+    }
+}
 
 @keyframes blink{
     40% {
@@ -399,7 +435,6 @@ h1 {
 }
 
 nav > h2:last-child:hover {
-    transform: scale(1.02);
     transform: translateY(-0.1em);
     border-radius: 3rem;
     opacity: 0.6;
