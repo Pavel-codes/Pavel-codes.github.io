@@ -1,24 +1,29 @@
+:root {
+    --background-darkest: #1C1C1C;
+    --background-color: #2e3440;
+    --background-complimentary: #3b4252;
+    --background-glow-color: #4c566a;
+}
+
 body {
     margin: 0 auto;
-    background-color: #202020;
     justify-content: center;
     position: relative;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: radial-gradient(circle, rgba(55,55,55, 1), rgba(28,28,28, 1));
+    /*background-image: radial-gradient(circle, rgba(55,55,55, 1), rgba(28,28,28, 1));*/
+    background-image: radial-gradient(circle, var(--background-color), rgba(28,28,28, 1));
 }
 
 nav {
-    margin-top: 0.5rem;
-    border: 2px solid;
+    margin-top: 0.1rem;
     border-color: darkgrey;
-    border-radius: 5em;
     position: absolute;
     display: flex;
     left: 50%;
     transform: translate(-50%);
     justify-content: center;
     width: fit-content;
-    background-color: #252525;
+    background-color: transparent;
     color: lightgray;
     overflow:auto;
     align-items: center;
@@ -70,7 +75,7 @@ nav {
 
 nav > h4:hover {
     position: relative;
-    background-color: #252525;
+    background-color: var(--background-darkest);
     border-radius: 1.5rem;
     cursor: pointer;
 }
@@ -128,8 +133,6 @@ ul > li{
 
 ul > li:hover{
     transform: scale(1.05);
-/*    background-image: linear-gradient(transparent, #2f2f2f, transparent);
-    border-radius: 5em;*/
 }
 
 #gitImg {
@@ -199,18 +202,43 @@ ul > li:hover{
         background-size: cover;
     }
 
+#pythonImg {
+    position: absolute;
+    top: 25%;
+    left: 42%;
+    width: 25em;
+    height: 25em;
+    border-style: solid;
+    border-color: transparent lightgray transparent transparent;
+    border-radius: 50%;
+    border-width: 0.1em 0.1em 0 0;
+    animation: orbitCCW 8s linear infinite;
+}
+
+    #pythonImg::before {
+        content: '';
+        position: absolute;
+        top: 1.5em;
+        right: 3.2em;
+        width: 3em;
+        height: 3em;
+        background-image: url("https://i.ibb.co/5G8B3wq/Python-logo.png");
+        border-radius: 50%;
+        background-size: cover;
+        z-index: 1;
+    }
+
 #jsImg {
     position: absolute;
     top: 12%;
-    left: 35%;
+    left: 34%;
     width: 40em;
     height: 40em;
     border-style: solid;
-    /*border-color: lightgray lightgray lightgray lightgray;*/
     border-color: lightgray transparent transparent transparent;
     border-radius: 50%;
     border-width: 0.1em 0.1em 0 0;
-    animation: orbit 13s linear infinite;
+    animation: orbit 15s linear infinite;
 }
 
     #jsImg::before {
@@ -232,11 +260,10 @@ ul > li:hover{
     width: 6.5em;
     height: 6.5em;
     border-style: solid;
-    /*border-color: lightgray lightgray lightgray lightgray;*/
     border-color: transparent transparent lightgray transparent;
     border-radius: 50%;
     border-width: 0.1em 0.1em 0.1em 0;
-    animation: orbitCCW 3s linear infinite;
+    animation: orbitCCW 2s linear infinite;
 }
 
     #htmlImg::before {
@@ -253,24 +280,23 @@ ul > li:hover{
 
 #cssImg {
     position: absolute;
-    top: 10%;
-    left: 78.5%;
-    width: 6.5em;
-    height: 6.5em;
+    top: 6%;
+    left: 74%;
+    width: 10em;
+    height: 10em;
     border-style: solid;
-    /*border-color: lightgray lightgray lightgray lightgray;*/
     border-color: lightgray transparent transparent transparent;
     border-radius: 50%;
     border-width: 0.1em 0.1em 0 0;
-    animation: orbit 3s linear infinite;
+    animation: orbit 5s linear infinite;
 }
 
     #cssImg::before {
         content: '';
         opacity: 0.9;
         position: absolute;
-        top: 0.7em;
-        left: 4.5em;
+        top: 1.2em;
+        left: 7.5em;
         width: 2em;
         height: 2em;
         background-image: url("https://img.icons8.com/metro/384/css.png");
@@ -307,18 +333,53 @@ ul > li:hover{
 }
 
 h1 {
-    padding: 1em;
+    padding: 0.1em;
     color: lightgray;
-    text-shadow: 0.1em 0.1em 0.2em red;
-    /*animation: gradient 3s ease infinite;*/
+    /*text-shadow: 0.1em 0.1em 0.2em red;*/
 }
 
-/*@keyframes gradient {
-    from{
+#titleTop {
+    margin-top: 5em;
+    margin-left: 1em;
+    text-shadow: 0.1em 0.1em 0.1em red;
+    animation: glitchLeft 2s ease infinite;
+}
 
-        background-image: conic-gradient(white,grey,black,white);
+@keyframes glitchLeft{
+    0% {
+        transform: translateX(0.02em);
+        text-shadow: 0.15em 0.1em 0.1em red;
     }
-}*/
+
+    20% {
+        transform: translateX(0.05em);
+        text-shadow: 0.1em 0.1em 0.1em red;
+    }
+
+    30% {
+        text-shadow: 0.1em 0.1em 0 red;
+        transform: translateX(0.03em);
+    }
+
+    50% {
+        text-shadow: 0.1em 0.1em 0.1em red;
+        transform: translateX(0);
+    }
+
+    70% {
+        text-shadow: 0 0.1em 0.1em red;
+    }
+
+    80% {
+        transform: translateX(0.03em);
+        text-shadow: 0.1em 0.1em 0.1em red;
+    }
+
+    100% {
+        transform: translateX(0.05em);
+        text-shadow: 0.2em 0.1em 0.1em red;
+    }
+}
 
 @keyframes blink{
     40% {
@@ -355,8 +416,26 @@ h1 {
     }
 }
 
+#topName {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+
+#bottomName {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    background: linear-gradient(to bottom,#000000, #202020, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translate(-0.02em, 0.02em);
+}
+
 nav > h2:last-child:hover {
-    background-color: darkgrey;
+    transform: translateY(-0.1em);
     border-radius: 3rem;
     opacity: 0.6;
     cursor: pointer;
@@ -374,12 +453,58 @@ nav:first-child {
     left: 1rem
 }
 
+#jsSkill {
+    list-style-image: url("https://img.icons8.com/ios-filled/24/0A0A0A/javascript-logo.png");
+}
 
-footer{
-    position:absolute;
+#pythonSkill {
+    list-style-image: url("https://img.icons8.com/material/24/python.png");
+}
+
+#aspSkill {
+    list-style-image: url("https://img.icons8.com/color/24/net-framework.png");
+}
+
+#csharpSkill {
+    list-style-image: url("https://img.icons8.com/color/24/c-sharp-logo.png")
+}
+
+#cSkill {
+    list-style-image: url("https://img.icons8.com/fluency/24/c-programming.png")
+}
+
+#cssSkill {
+    list-style-image: url("https://img.icons8.com/color/24/css3.png");
+}
+
+#htmlSkill {
+    list-style-image: url("https://img.icons8.com/color/24/html-5--v2.png");
+}
+
+#skillSet {
+    position: absolute;
+    top: 10em;
+    left: 1em;
+    color: white;
+}
+
+    #skillSet > img {
+        border: hidden;
+        border-radius: 5px;
+        width: 2rem;
+        height: 2rem;
+        background-color: rgba(80,80,80,0.6);
+        opacity: 0.3;
+        margin: 1rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+footer {
+    position: absolute;
     bottom: 1em;
     color: white;
-
 }
 
     footer > img {
@@ -392,8 +517,8 @@ footer{
         align-content: center;
         width: 2rem;
         height: 2rem;
-        background-color: darkgrey;
-        opacity: 0.1;
+        background-color: rgba(80,80,80,0.6);
+        opacity: 0.3;
         margin: 1rem;
         padding: 0.5rem;
         font-size: 2rem;

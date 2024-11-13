@@ -13,6 +13,10 @@ let cImage = document.createElement("div");
 cImage.id = "cImg";
 container.append(cImage);
 
+let pythonImage = document.createElement("div");
+pythonImage.id = "pythonImg";
+container.append(pythonImage);
+
 let jsImage = document.createElement("div");
 jsImage.id = "jsImg";
 container.append(jsImage);
@@ -31,12 +35,14 @@ container.append(cSharpImage);
 
 let skillSet = document.createElement("div");
 skillSet.id = "skillSet";
-footer.prepend(skillSet);
+container.prepend(skillSet);
 
-skillSet.innerHTML = `<ul><li>Java Script</li><li>CSS</li><li>HTML</li><li>C#</li><li>ASP.NET</li><li>Python</li><li>C</li></ul>`;
+skillSet.innerHTML = `<ul><li id="jsSkill">Java Script</li><li id="cssSkill">CSS</li><li id="htmlSkill">HTML</li>
+                      <li id="cSharpSkill">C#</li><li id="aspSkill">ASP.NET</li><li id="pythonSkill">Python</li>
+                      <li id="cSkill">C</li></ul>`;
 
-let titleName = document.createElement("h2");
-
+let titleNameTop = document.createElement("h1");
+let titleNameBottom = document.createElement("h1");
 let myProjects = document.createElement("h4");
 let mySkills = document.createElement("h4");
 let about = document.createElement("h4");
@@ -46,11 +52,23 @@ let downloadCV = document.createElement("h2");
 let returnUp = document.createElement("img");
 let socialMedia = document.getElementById("socialMedia");
 
-let title = document.createElement("h1");
-title.innerText = "Fullstack Developer";
-header.append(title);
+titleNameTop.innerText = "Pavel Butov";
+titleNameTop.id = "topName";
+titleNameBottom.innerText = "Pavel Butov";
+titleNameBottom.id = "bottomName";
+titleNameBottom.ariaHidden = "true";
 
-titleName.innerText = "Pavel Butov";
+header.append(titleNameTop);
+header.append(titleNameBottom);
+
+let titleTop = document.createElement("h1");
+let titleBottom = document.createElement("h1");
+titleTop.innerText = "Fullstack Developer";
+titleTop.id = "titleTop";
+header.append(titleTop);
+
+
+
 myProjects.innerText = "Projects";
 mySkills.innerText = "Skills";
 about.innerText = "About";
@@ -86,7 +104,6 @@ instaGram.target = "_blank";
 socialMedia.appendChild(instaGram);
 instaGram.innerHTML = `<img id="instaGram" src="https://img.icons8.com/?size=100&id=85140&format=png&color=000000" />`;
 
-navbar.append(titleName);
 navbar.append(myProjects);
 navbar.append(mySkills);
 navbar.append(about);
