@@ -10,8 +10,9 @@ body {
     justify-content: center;
     position: relative;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /*background-image: radial-gradient(circle, rgba(55,55,55, 1), rgba(28,28,28, 1));*/
+    /*font-family: "Space Mono",monospace;*/
     background-image: radial-gradient(circle, var(--background-color), rgba(28,28,28, 1));
+    overflow-x:hidden;
 }
 
 nav {
@@ -122,7 +123,10 @@ nav > h4:hover {
     position: relative;
     width: 100%;
     height: 100%;
-    display:flex;
+    display: flex;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
 }
 
 ul > li{
@@ -151,18 +155,6 @@ ul > li:hover{
     animation: pulse 1.5s ease infinite;
 }
 
-#cSharpImg::before {
-    content: '';
-    position: absolute;
-    top: 1.5em;
-    right: 0.8em;
-    width: 2.5em;
-    height: 2.5em;
-    background-image: url("https://cdn-icons-png.flaticon.com/256/74/74906.png");
-    border-radius: 50%;
-    background-size: cover;
-}
-
 #cSharpImg {
     position: absolute;
     top: 32.5%;
@@ -173,8 +165,20 @@ ul > li:hover{
     border-color: white transparent transparent transparent;
     border-radius: 50%;
     border-width: 0.1em 0.1em 0 0;
-    animation: orbit 5s linear infinite;
+    animation: orbit 4s linear infinite;
 }
+
+    #cSharpImg::before {
+        content: '';
+        position: absolute;
+        top: 1.5em;
+        right: 0.8em;
+        width: 2.5em;
+        height: 2.5em;
+        background-image: url("https://cdn-icons-png.flaticon.com/256/74/74906.png");
+        border-radius: 50%;
+        background-size: cover;
+    }
 
 #cImg {
     position: absolute;
@@ -186,7 +190,7 @@ ul > li:hover{
     border-color: lightgray transparent transparent transparent;
     border-radius: 50%;
     border-width: 0.1em 0.1em 0 0;
-    animation: orbit 3s linear infinite;
+    animation: orbit 2.5s linear infinite;
 }
 
     #cImg::before {
@@ -205,8 +209,8 @@ ul > li:hover{
     position: absolute;
     top: 25%;
     left: 42%;
-    width: 25em;
-    height: 25em;
+    width: 23em;
+    height: 23em;
     border-style: solid;
     border-color: transparent lightgray transparent transparent;
     border-radius: 50%;
@@ -219,8 +223,8 @@ ul > li:hover{
         position: absolute;
         top: 1.5em;
         right: 3.2em;
-        width: 3em;
-        height: 3em;
+        width: 2.8em;
+        height: 2.8em;
         background-image: url("https://i.ibb.co/5G8B3wq/Python-logo.png");
         border-radius: 50%;
         background-size: cover;
@@ -262,7 +266,7 @@ ul > li:hover{
     border-color: transparent transparent lightgray transparent;
     border-radius: 50%;
     border-width: 0.1em 0.1em 0.1em 0;
-    animation: orbitCCW 2s linear infinite;
+    animation: orbitCCW 1.7s linear infinite;
 }
 
     #htmlImg::before {
@@ -288,7 +292,7 @@ ul > li:hover{
     border-color: lightgray transparent transparent transparent;
     border-radius: 50%;
     border-width: 0.1em 0.1em 0 0;
-    animation: orbit 5s linear infinite;
+    animation: orbit 3.5s linear infinite;
 }
 
     #cssImg::before {
@@ -340,13 +344,15 @@ h1 {
 }
 
 #titleTop {
+    font-family: "Space Mono", monospace;
     margin-top: 5em;
     margin-left: 1em;
-    text-shadow: 0.1em 0.1em 0.1em red;
-    animation: glitchLeft 2s ease infinite;
+    width: fit-content;
+    /*text-shadow: 0.1em 0.1em 0.1em red;*/
+    /*animation: glitchLeft 2s ease infinite;*/
 }
 
-@keyframes glitchLeft{
+/*@keyframes glitchLeft{
     0% {
         transform: translateX(0.02em);
         text-shadow: 0.15em 0.1em 0.1em red;
@@ -380,7 +386,7 @@ h1 {
         transform: translateX(0.05em);
         text-shadow: 0.2em 0.1em 0.1em red;
     }
-}
+}*/
 
 @keyframes blink{
     40% {

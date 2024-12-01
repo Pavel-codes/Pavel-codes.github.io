@@ -63,7 +63,8 @@ header.append(titleNameBottom);
 
 let titleTop = document.createElement("h1");
 let titleBottom = document.createElement("h1");
-titleTop.innerText = "Fullstack Developer";
+titleTop.innerText = "FULLSTACK DEVELOPER";
+titleTop.dataset.data = "FULLSTACK DEVELOPER";
 titleTop.id = "titleTop";
 header.append(titleTop);
 
@@ -129,3 +130,36 @@ function scrollFunction() {
 returnUp.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior:'smooth'});
 });
+
+const lettersUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lettersLower = "abcdefghijklmnopqrstuvwxyz";
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        let iterations = 0;
+        const interval = setInterval(() => {
+            titleTop.innerText = titleTop.innerText.split("").map((letter, index) => {
+                if (index < iterations) return titleTop.dataset.data[index];
+                return lettersUpper[Math.floor(Math.random() * 26)];
+            }).join("");
+
+            if (iterations >= titleTop.dataset.data.length) clearInterval(interval);
+            iterations += 1 / 3;
+        }, 30);
+    }, 500);
+});
+
+titleTop.onmouseover = event => {
+    let iterations = 0;
+    const interval = setInterval(() => {
+        event.target.innerText = event.target.innerText.split("").map((letter, index) => {
+            if (index < iterations) return event.target.dataset.data[index];
+
+            return lettersUpper[Math.floor(Math.random() * 26)]
+                
+        }).join("");
+
+        if (iterations >= event.target.dataset.data.length) clearInterval(interval);
+        iterations += 1/2;
+    }, 20);
+}
