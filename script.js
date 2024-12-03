@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (iterations >= titleTop.dataset.data.length) clearInterval(interval);
             iterations += 1 / 3;
-        }, 30);
+        }, 20);
     }, 500);
 });
 
