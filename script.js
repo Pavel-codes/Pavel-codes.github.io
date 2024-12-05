@@ -42,12 +42,12 @@ skillSet.innerHTML = `<ul><li id="jsSkill">Java Script</li><li id="cssSkill">CSS
                       <li id="cSkill">C</li></ul>`;
 
 let titleName = document.createElement("h1");
-let myProjects = document.createElement("h4");
-let mySkills = document.createElement("h4");
-let about = document.createElement("h4");
-let contactInfo = document.createElement("h4");
-let emailMe = document.createElement("h2");
-let downloadCV = document.createElement("h2");
+let myProjects = document.createElement("h3");
+let mySkills = document.createElement("h3");
+let about = document.createElement("h3");
+let contactInfo = document.createElement("h3");
+let emailMe = document.createElement("h3");
+let downloadCV = document.createElement("h3");
 let returnUp = document.createElement("img");
 let socialMedia = document.getElementById("socialMedia");
 
@@ -75,7 +75,7 @@ mySkills.innerText = "Skills";
 about.innerText = "About";
 contactInfo.innerText = "Contact";
 emailMe.innerText = "Email";
-downloadCV.innerText = "Download CV";
+downloadCV.innerText = "View CV";
 returnUp.src = "https://img.icons8.com/?size=100&id=87724&format=png&color=000000";
 returnUp.style.display = "none";
 returnUp.id = "returnUp";
@@ -131,7 +131,7 @@ returnUp.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior:'smooth'});
 });
 
-const lettersUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lettersUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+|-";
 const lettersLower = "abcdefghijklmnopqrstuvwxyz";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const interval = setInterval(() => {
             titleTop.innerText = titleTop.innerText.split("").map((letter, index) => {
                 if (index < iterations) return titleTop.dataset.data[index];
-                return lettersUpper[Math.floor(Math.random() * 26)];
+                return lettersUpper[Math.floor(Math.random() * lettersUpper.length)];
             }).join("");
 
             if (iterations >= titleTop.dataset.data.length) clearInterval(interval);
@@ -155,7 +155,7 @@ titleTop.onmouseover = event => {
         event.target.innerText = event.target.innerText.split("").map((letter, index) => {
             if (index < iterations) return event.target.dataset.data[index];
 
-            return lettersUpper[Math.floor(Math.random() * 26)]
+            return lettersUpper[Math.floor(Math.random() * lettersUpper.length)]
                 
         }).join("");
 

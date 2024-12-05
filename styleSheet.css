@@ -74,7 +74,7 @@ nav {
     }
 }
 
-nav > h4:hover {
+nav > h3:hover {
     position: relative;
     background-color: var(--background-darkest);
     border-radius: 1.5rem;
@@ -395,81 +395,9 @@ h1 {
     animation: glitch 1s linear infinite;
 }
 
-@keyframes glitch {
-    2%,64% {
-        transform: translate(2px,0) skew(0deg);
-    }
 
-    4%,60% {
-        transform: translate(-2px,0) skew(0deg);
-    }
 
-    62% {
-        transform: translate(0,0) skew(5deg);
-    }
-}
-
-#name:before,
-#name:after {
-    content: attr(title);
-    position: absolute;
-    left: 0;
-}
-
-#name:before {
-    animation: glitchTop 1s linear infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-    --webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
-
-@keyframes glitchTop {
-    2%,64% {
-        transform: translate(2px,-2px);
-    }
-
-    4%,60% {
-        transform: translate(-2px,2px);
-    }
-
-    62% {
-        transform: translate(13px,-1px) skew(-13deg);
-    }
-}
-
-#name:after {
-    animation: glitchBotom 1.5s linear infinite;
-    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-    --webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-
-@keyframes glitchBotom {
-    2%,64% {
-        transform: translate(-2px,0);
-    }
-
-    4%,60% {
-        transform: translate(-2px,0);
-    }
-
-    62% {
-        transform: translate(-22px,5px) skew(21deg);
-    }
-}
-
-/* end of new animation */
-
-/*#bottomName {
-    position: absolute;
-    top: 1em;
-    left: 1em;
-    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
-    background: linear-gradient(to bottom,#000000, #202020, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: translate(-0.02em, 0.02em);
-}*/
-
-nav > h2:last-child:hover {
+nav > h3:hover {
     transform: translateY(-0.1em);
     border-radius: 3rem;
     opacity: 0.6;
@@ -477,7 +405,7 @@ nav > h2:last-child:hover {
 }
 
 
-h2, h4{
+h2, h3, h4{
     color: lightgray;
     margin: 1rem;
     padding: 1rem;
