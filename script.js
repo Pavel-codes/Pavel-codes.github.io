@@ -41,8 +41,7 @@ skillSet.innerHTML = `<ul><li id="jsSkill">Java Script</li><li id="cssSkill">CSS
                       <li id="cSharpSkill">C#</li><li id="aspSkill">ASP.NET</li><li id="pythonSkill">Python</li>
                       <li id="cSkill">C</li></ul>`;
 
-let titleNameTop = document.createElement("h1");
-let titleNameBottom = document.createElement("h1");
+let titleName = document.createElement("h1");
 let myProjects = document.createElement("h4");
 let mySkills = document.createElement("h4");
 let about = document.createElement("h4");
@@ -52,14 +51,15 @@ let downloadCV = document.createElement("h2");
 let returnUp = document.createElement("img");
 let socialMedia = document.getElementById("socialMedia");
 
-titleNameTop.innerText = "Pavel Butov";
-titleNameTop.id = "topName";
-titleNameBottom.innerText = "Pavel Butov";
-titleNameBottom.id = "bottomName";
-titleNameBottom.ariaHidden = "true";
+titleName.innerText = "Pavel Butov";
+titleName.id = "name";
+titleName.setAttribute("title", "Pavel Butov");
+//titleNameBottom.innerText = "Pavel Butov";
+//titleNameBottom.id = "bottomName";
+//titleNameBottom.ariaHidden = "true";
 
-header.append(titleNameTop);
-header.append(titleNameBottom);
+header.append(titleName);
+//header.append(titleNameBottom);
 
 let titleTop = document.createElement("h1");
 let titleBottom = document.createElement("h1");
@@ -74,7 +74,7 @@ myProjects.innerText = "Projects";
 mySkills.innerText = "Skills";
 about.innerText = "About";
 contactInfo.innerText = "Contact";
-emailMe.innerText = "Email me";
+emailMe.innerText = "Email";
 downloadCV.innerText = "Download CV";
 returnUp.src = "https://img.icons8.com/?size=100&id=87724&format=png&color=000000";
 returnUp.style.display = "none";

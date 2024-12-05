@@ -9,8 +9,8 @@ body {
     margin: 0 auto;
     justify-content: center;
     position: relative;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /*font-family: "Space Mono",monospace;*/
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+    font-family: "Space Mono",monospace;
     background-image: radial-gradient(circle, var(--background-color), rgba(28,28,28, 1));
     overflow-x:hidden;
 }
@@ -340,7 +340,6 @@ ul > li:hover{
 h1 {
     padding: 0.1em;
     color: lightgray;
-    /*text-shadow: 0.1em 0.1em 0.2em red;*/
 }
 
 #titleTop {
@@ -351,42 +350,6 @@ h1 {
     /*text-shadow: 0.1em 0.1em 0.1em red;*/
     /*animation: glitchLeft 2s ease infinite;*/
 }
-
-/*@keyframes glitchLeft{
-    0% {
-        transform: translateX(0.02em);
-        text-shadow: 0.15em 0.1em 0.1em red;
-    }
-
-    20% {
-        transform: translateX(0.05em);
-        text-shadow: 0.1em 0.1em 0.1em red;
-    }
-
-    30% {
-        text-shadow: 0.1em 0.1em 0 red;
-        transform: translateX(0.03em);
-    }
-
-    50% {
-        text-shadow: 0.1em 0.1em 0.1em red;
-        transform: translateX(0);
-    }
-
-    70% {
-        text-shadow: 0 0.1em 0.1em red;
-    }
-
-    80% {
-        transform: translateX(0.03em);
-        text-shadow: 0.1em 0.1em 0.1em red;
-    }
-
-    100% {
-        transform: translateX(0.05em);
-        text-shadow: 0.2em 0.1em 0.1em red;
-    }
-}*/
 
 @keyframes blink{
     40% {
@@ -423,14 +386,79 @@ h1 {
     }
 }
 
-#topName {
+/* testing new animation for glitch */
+
+#name {
     position: absolute;
     top: 1em;
     left: 1em;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+    animation: glitch 1s linear infinite;
 }
 
-#bottomName {
+@keyframes glitch {
+    2%,64% {
+        transform: translate(2px,0) skew(0deg);
+    }
+
+    4%,60% {
+        transform: translate(-2px,0) skew(0deg);
+    }
+
+    62% {
+        transform: translate(0,0) skew(5deg);
+    }
+}
+
+#name:before,
+#name:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+#name:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    --webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+    2%,64% {
+        transform: translate(2px,-2px);
+    }
+
+    4%,60% {
+        transform: translate(-2px,2px);
+    }
+
+    62% {
+        transform: translate(13px,-1px) skew(-13deg);
+    }
+}
+
+#name:after {
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    --webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+    2%,64% {
+        transform: translate(-2px,0);
+    }
+
+    4%,60% {
+        transform: translate(-2px,0);
+    }
+
+    62% {
+        transform: translate(-22px,5px) skew(21deg);
+    }
+}
+
+/* end of new animation */
+
+/*#bottomName {
     position: absolute;
     top: 1em;
     left: 1em;
@@ -439,7 +467,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: translate(-0.02em, 0.02em);
-}
+}*/
 
 nav > h2:last-child:hover {
     transform: translateY(-0.1em);
