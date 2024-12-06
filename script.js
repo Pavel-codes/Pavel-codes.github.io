@@ -131,7 +131,7 @@ returnUp.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior:'smooth'});
 });
 
-const lettersUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+|-";
+const lettersUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lettersLower = "abcdefghijklmnopqrstuvwxyz";
 
 document.addEventListener("DOMContentLoaded", () => {

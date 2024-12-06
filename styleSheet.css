@@ -131,8 +131,9 @@ nav > h3:hover {
 
 ul > li{
     margin: 1em;
-    padding: 0.5em;
+    padding: 1em;
 }
+
 
 ul > li:hover{
     transform: scale(1.05);
@@ -449,6 +450,7 @@ nav:first-child {
     top: 10em;
     left: 1em;
     color: white;
+    padding-bottom: 0.1em;
 }
 
     #skillSet > img {
@@ -464,11 +466,13 @@ nav:first-child {
         cursor: pointer;
     }
 
-footer {
-    position: absolute;
-    bottom: 1em;
-    color: white;
-}
+
+
+    footer {
+        position: absolute;
+        bottom: 1em;
+        color: white;
+    }
 
     footer > img {
         border: hidden;
