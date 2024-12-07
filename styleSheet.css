@@ -275,8 +275,8 @@ ul > li:hover{
         position: absolute;
         bottom: 0.7em;
         left: 4.5em;
-        width: 2em;
-        height: 2em;
+        width: 1.8em;
+        height: 1.8em;
         overflow: hidden;
         background-image: url("https://img.icons8.com/metro/384/html.png");
         border-radius: 50%;
@@ -302,8 +302,8 @@ ul > li:hover{
         position: absolute;
         top: 1.2em;
         left: 7.5em;
-        width: 2em;
-        height: 2em;
+        width: 1.8em;
+        height: 1.8em;
         overflow: clip;
         background-image: url("https://img.icons8.com/metro/384/css.png");
         border-radius: 50%;
@@ -343,15 +343,6 @@ h1 {
     color: lightgray;
 }
 
-#titleTop {
-    font-family: "Space Mono", monospace;
-    margin-top: 5em;
-    margin-left: 1em;
-    width: fit-content;
-    /*text-shadow: 0.1em 0.1em 0.1em red;*/
-    /*animation: glitchLeft 2s ease infinite;*/
-}
-
 @keyframes blink{
     40% {
         opacity: 1;
@@ -387,16 +378,84 @@ h1 {
     }
 }
 
-/* testing new animation for glitch */
+/* testing new animation for glitch - needs fixing */
 
-#name {
+#nameTop {
+   --index: 0;
+}
+#nameBottom {
+    --index: 2;
+}
+#nameCenter {
+    --index:1;
+}
+
+#titleTop {
+    margin-top: 3em;
+    margin-left: 1em;
+}
+
+header > #nameTop, header > #nameBottom, header > #nameCenter {
     position: absolute;
     top: 1em;
     left: 1em;
+    font-family: "Space Mono", monospace;
     animation: glitch 1s linear infinite;
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+    animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
 }
 
 
+header > #nameCenter {
+    --glitch-translate: 8px;
+}
+
+header > #nameBottom {
+    --glitch-translate: -8px;
+}
+
+@keyframes stack {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+        text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    }
+
+    60% {
+        opacity: 0.5;
+        transform: translateX(50%);
+    }
+
+    80% {
+        transform: none;
+        opacity: 1;
+        text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+
+    100% {
+        text-shadow: none;
+    }
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+        transform: translate(var(--glitch-translate));
+    }
+
+    2% {
+        text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+
+    4%, 100% {
+        text-shadow: none;
+        transform: none;
+    }
+}
 
 nav > h3:hover {
     transform: translateY(-0.1em);
