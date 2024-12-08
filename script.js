@@ -41,9 +41,15 @@ skillSet.innerHTML = `<ul><li id="jsSkill">Java Script</li><li id="cssSkill">CSS
                       <li id="cSharpSkill">C#</li><li id="aspSkill">ASP.NET</li><li id="pythonSkill">Python</li>
                       <li id="cSkill">C</li></ul>`;
 
-let titleNameTop = document.createElement("h1");
-let titleNameCenter = document.createElement("h1");
-let titleNameBottom = document.createElement("h1");
+//let titleNameTop = document.createElement("h1");
+//let titleNameCenter = document.createElement("h1");
+//let titleNameBottom = document.createElement("h1");
+let titleNameTop = document.createElement("span");
+let titleNameCenter = document.createElement("span");
+let titleNameBottom = document.createElement("span");
+let stack = document.createElement("div");
+stack.className = "stack";
+
 let myProjects = document.createElement("h3");
 let mySkills = document.createElement("h3");
 let about = document.createElement("h3");
@@ -60,9 +66,15 @@ titleNameCenter.id = "nameCenter";
 titleNameBottom.innerText = "Pavel Butov";
 titleNameBottom.id = "nameBottom";
 
-header.append(titleNameTop);
-header.append(titleNameCenter);
-header.append(titleNameBottom);
+//header.append(titleNameTop);
+//header.append(titleNameCenter);
+//header.append(titleNameBottom);
+
+stack.append(titleNameTop);
+stack.append(titleNameCenter);
+stack.append(titleNameBottom);
+//testing
+header.append(stack);
 
 let titleTop = document.createElement("h1");
 let titleBottom = document.createElement("h1");

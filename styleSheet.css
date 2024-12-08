@@ -378,45 +378,57 @@ h1 {
     }
 }
 
-/* testing new animation for glitch - needs fixing */
-
-#nameTop {
-   --index: 0;
-}
-#nameBottom {
-    --index: 2;
-}
-#nameCenter {
-    --index:1;
-}
-
 #titleTop {
     margin-top: 3em;
     margin-left: 1em;
+    width: fit-content;
 }
 
-header > #nameTop, header > #nameBottom, header > #nameCenter {
+/* start of new test */
+
+.stack {
+    color: lightgrey;
+    display: grid;
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+}
+
+#nameTop {
+    --index: 0;
+}
+
+#nameBottom {
+    --index: 2;
+}
+
+#nameCenter {
+    --index: 1;
+}
+
+.stack span {
     position: absolute;
     top: 1em;
     left: 1em;
-    font-family: "Space Mono", monospace;
-    animation: glitch 1s linear infinite;
+    font-weight: bold;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    font-size: 3rem;
     --stack-height: calc(100% / var(--stacks) - 1px);
     --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
     --clip-top: calc(var(--stack-height) * var(--index));
     --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
     clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-    animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
+    animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 3s ease infinite 2s alternate-reverse;
 }
 
+        .stack span:nth-child(odd) {
+            --glitch-translate: 8px;
+        }
 
-header > #nameCenter {
-    --glitch-translate: 8px;
-}
-
-header > #nameBottom {
-    --glitch-translate: -8px;
-}
+        .stack span:nth-child(even) {
+            --glitch-translate: -8px;
+        }
 
 @keyframes stack {
     0% {
@@ -425,7 +437,7 @@ header > #nameBottom {
         text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
     }
 
-    60% {
+    ; 60% {
         opacity: 0.5;
         transform: translateX(50%);
     }
@@ -456,6 +468,8 @@ header > #nameBottom {
         transform: none;
     }
 }
+
+/* end of new test */
 
 nav > h3:hover {
     transform: translateY(-0.1em);
