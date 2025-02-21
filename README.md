@@ -36,6 +36,6 @@ Add your own projects and information.
 
 🌍 Live Demo
 
-You can view the live demo at: [Live Portfolio]([url](https://pavel-codes.github.io/))
+You can view the live demo at: [Live Portfolio](https://pavel-codes.github.io/)
 
 
