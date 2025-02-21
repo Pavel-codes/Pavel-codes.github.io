@@ -16,6 +16,7 @@ A personal portfolio website built using HTML, CSS, and JavaScript to showcase p
 
 🎨 Smooth animations and transitions
 
+
 🛠 Technologies Used
 
 🏗 HTML: Structure and content
@@ -24,17 +25,6 @@ A personal portfolio website built using HTML, CSS, and JavaScript to showcase p
 
 ⚡ JavaScript: Interactivity and animations
 
-📥 Installation
-
-Clone the repository:
-
-git clone https://github.com/your-username/your-portfolio.git
-
-Navigate to the project folder:
-
-cd your-portfolio
-
-Open index.html in your browser.
 
 🎯 Usage
 
