@@ -1,21 +1,431 @@
-﻿﻿<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-            crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" type="text/css" href="styleSheet.css">
+    <title>Pavel Butov - Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav></nav>
-    <header></header>
-    <div id="container"></div>
-    <span id="socialMedia"></span>
-    <footer></footer>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#" class="logo">Pavel Butov</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Pavel Butov</h1>
+                    <p class="hero-subtitle">Full Stack Developer</p>
+                    <p class="hero-description">Computer Science graduate with hands-on experience building full-stack and serverless applications using modern web and cloud technologies. Specialized in AWS, .NET, React, and Python with a focus on backend development.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Passionate Developer & Problem Solver</h3>
+                    <p>I'm a Computer Science graduate from Ruppin Academic Center with extensive experience in both hardware and software development. My unique background spans from military service as a Communication and Navigation technician to working with cutting-edge 3D camera technology at Intel Corporation.</p>
+                    <p>I specialize in building scalable full-stack applications using modern technologies like React, .NET, and AWS cloud services. My experience includes serverless architectures, database design, and creating intuitive user interfaces.</p>
+                    
+                    <div class="education">
+                        <h4>Education</h4>
+                        <div class="education-item">
+                            <div class="edu-header">
+                                <h5>BSc in Computer Science</h5>
+                                <span class="edu-date">2022 – 2025</span>
+                            </div>
+                            <p>Ruppin Academic Center - Specializing in fullstack application development and cloud technologies</p>
+                        </div>
+                        <div class="education-item">
+                            <div class="edu-header">
+                                <h5>Associate Electronics Engineering</h5>
+                                <span class="edu-date">2010 – 2012</span>
+                            </div>
+                            <p>IAF Technological College - Specialization in Communication, control and digital systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Tester Architecture Student</h3>
+                            <span class="company">Intel Corporation - ODM Technologies</span>
+                            <span class="date">02/2023 – 04/2024</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Setup and calibration of 3D camera tester machines</li>
+                            <li>Calibration and validation process improvement resulting in higher production yield</li>
+                            <li>Camera tester machine performance analysis</li>
+                            <li>Implementation of optical testing methods</li>
+                            <li>Semi-automated tasks using Python scripts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Laboratory Technician of Optics and Electro Mechanics</h3>
+                            <span class="company">Intel Corporation - Realsense 3D cameras, computer vision platform</span>
+                            <span class="date">04/2018 – 02/2023</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Collaborated with R&D teams to verify lens performance and assemble cameras</li>
+                            <li>Built optical setups for lenses, sensors, and Class 4 lasers</li>
+                            <li>Conducted extreme temperature and KPI tests on 3D cameras</li>
+                            <li>Used MATLAB and Imatest for optical experiments and result analysis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Final Test Technician</h3>
+                            <span class="company">R.H. Electronics - Lumenis project class 4 laser systems</span>
+                            <span class="date">06/2015 – 09/2017</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Learned testing procedures for 4 different SKUs within a month</li>
+                            <li>Trained new technicians, sharing knowledge and expertise in final test procedures</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Communication and Navigation Technician</h3>
+                            <span class="company">Military Service - Air Force</span>
+                            <span class="date">2012 – 2015</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Maintenance and fixing faulty navigation and communication equipment</li>
+                            <li>Worked on F-16 and Skyhawk airplanes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Story Time</h3>
+                        <span class="project-type">React Native Android Application</span>
+                    </div>
+                    <div class="project-description">
+                        <p>A React Native Android app helping children learn Hebrew via speech-to-text, text-to-speech, and an audible quiz game. Features Google OAuth 2.0, Cloudinary for images, MongoDB Atlas for data storage, and generative AI for content creation.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">ASP.NET</span>
+                        <span class="tech-tag">AI/ML</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>GoJira Task Management</h3>
+                        <span class="project-type">AWS Based React Static Website</span>
+                    </div>
+                    <div class="project-description">
+                        <p>Serverless web application featuring S3 static hosting, Cognito authentication, DynamoDB, API Gateway for REST API with Lambda functions. Includes SNS for automated email notifications and GitHub Actions for deployment.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">DynamoDB</span>
+                        <span class="tech-tag">Lambda</span>
+                        <span class="tech-tag">S3</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Cloud-Based Book Repository</h3>
+                        <span class="project-type">AWS Based JavaScript Website</span>
+                    </div>
+                    <div class="project-description">
+                        <p>Serverless web app using Google Books API, hosted on S3 with Cognito authentication, DynamoDB for data storage, and Lambda functions. Features Step Functions and SNS for automated workflows and notifications.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Google Books API</span>
+                        <span class="tech-tag">Step Functions</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>MS SQL Book Repository</h3>
+                        <span class="project-type">.NET and JavaScript Website</span>
+                    </div>
+                    <div class="project-description">
+                        <p>Web application for managing books and user collections. Users can add books, view detailed information, and organize personal book lists. Built with C# ASP.NET backend and JavaScript/jQuery frontend.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">ASP.NET</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">jQuery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>C#</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React Native</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>.NET</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MS SQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-table"></i>
+                            <span>DynamoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cloud & AWS</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS Cloud</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-lambda"></i>
+                            <span>Lambda</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>S3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-key"></i>
+                            <span>Cognito</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certifications">
+                <h3>AWS Certifications</h3>
+                <div class="cert-items">
+                    <div class="cert-item">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS Academy Cloud Developing</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS Academy Cloud Web Application Builder</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS Academy Microservices and CI/CD Pipeline Builder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:fabelbutov79@gmail.com">fabelbutov79@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p><a href="tel:0528199826">052-819-9826</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://linkedin.com/in/pavel-butov" target="_blank">pavel-butov</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/Pavel-codes" target="_blank">Pavel-codes</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Pavel Butov. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Pavel-codes" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/pavel-butov" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:fabelbutov79@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
