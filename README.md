@@ -4,35 +4,28 @@ A personal portfolio website built using HTML, CSS, and JavaScript to showcase p
 
 
 
-🌟 Features
+Features:
 
-📱 Responsive design for desktop and mobile - WIP
+  Responsive design for desktop and mobile - WIP
 
-🏆 Interactive navigation - WIP
+  Interactive navigation - WIP
 
-💼 Project showcase section - WIP
+  Project showcase section - WIP
 
-📧 Contact form - WIP
+  Contact form - WIP
 
-🎨 Smooth animations and transitions
-
-
-🛠 Technologies Used
-
-🏗 HTML: Structure and content
-
-🎨 CSS: Styling and layout
-
-⚡ JavaScript: Interactivity and animations
+  Smooth animations and transitions
 
 
-🎯 Usage
+Tech stack:
 
-Modify the HTML and CSS files to customize the website.
+  HTML: Structure and content
 
-Update the JavaScript for interactive elements.
+  CSS: Styling and layout
 
-Add your own projects and information.
+  JavaScript: Interactivity and animations
+
+
 
 🌍 Live Demo
 
