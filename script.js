@@ -280,7 +280,7 @@ function setupTypingEffect() {
         if (i < text.length) {
             subtitle.textContent += text.charAt(i);
             i++;
-            setTimeout(typeWriter, 100);
+            setTimeout(typeWriter, 50);
         } else {
             // Remove cursor after typing is complete
             setTimeout(() => {
