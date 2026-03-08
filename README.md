@@ -1,10 +1,10 @@
-🚀 Portfolio Website
+# Portfolio Website #
 
 A personal portfolio website built using HTML, CSS, and JavaScript to showcase projects, skills, and experience.
 
 
 
-Features:
+# Features: #
 
   Responsive design for desktop and mobile - WIP
 
@@ -17,7 +17,7 @@ Features:
   Smooth animations and transitions
 
 
-Tech stack:
+# Tech stack: #
 
   HTML: Structure and content
 
@@ -27,7 +27,7 @@ Tech stack:
 
 
 
-🌍 Live Demo
+# Demo: #
 
 You can view the live demo at: [Live Portfolio](https://pavel-codes.github.io/)
 
