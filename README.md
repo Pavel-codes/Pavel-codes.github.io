@@ -6,9 +6,9 @@ A personal portfolio website built using HTML, CSS, and JavaScript to showcase p
 
 # Features: #
 
-  Responsive design for desktop and mobile - WIP
+  Responsive design for desktop and mobile
 
-  Interactive navigation - WIP
+  Interactive navigation
 
   Project showcase section - WIP
 
